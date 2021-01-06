@@ -1,11 +1,11 @@
-def call() {
-  def env
-  def currentBuild
+def call(script) {
+  // def env
+  // def currentBuild
 
-  echo "env ${env.BRANCH_NAME}"
+  echo "env ${script.env.BRANCH_NAME}"
   
   def log = ""
-        def changeLogSets = currentBuild.changeSets
+        def changeLogSets = script.currentBuild.changeSets
          echo "c ${changeLogSets.size()}"
         for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
