@@ -1,7 +1,7 @@
 def info(script) {
 
   println "env ${script.env.BRANCH_NAME}"
-  
+  def listFile = ""
   def log = ""
         def changeLogSets = script.currentBuild.changeSets
          echo "c ${changeLogSets.size()}"
@@ -21,9 +21,7 @@ def info(script) {
                 log += "<br>"
                 log +="<b>Changed Paths:</b>"
                 log += "<br>"
-                 echo "c2 ${entry}"
                 def files = new ArrayList(entry.affectedFiles)
-                  echo "c3 ${files}"
                 for (int k = 0; k < files.size(); k++) {
                     def file = files[k]
                     listFile += "${file.path},"
