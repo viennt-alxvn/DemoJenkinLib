@@ -1,5 +1,5 @@
 def info(env, currentBuild) {
-  def resultMap = [html: "", files: ""]
+  def resultMap = [html: {}, files: {}]
   def listFile = ""
   def log = ""
         def changeLogSets = currentBuild.changeSets
