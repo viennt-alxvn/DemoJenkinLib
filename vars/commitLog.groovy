@@ -1,4 +1,4 @@
-def call(script) {
+def info(script) {
   def env
   // def currentBuild
 
