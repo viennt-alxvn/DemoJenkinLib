@@ -1,8 +1,8 @@
-def get(script) {
+def get() {
   // def env
   // def currentBuild
 
-  echo "env ${script.env.BRANCH_NAME}"
+  echo "env ${this.env.BRANCH_NAME}"
   
   // def log = ""
   //       def changeLogSets = script.currentBuild.changeSets
