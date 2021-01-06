@@ -1,10 +1,8 @@
 def info(env, currentBuild) {
-
-  println "env ${env.BRANCH_NAME}"
+  def resultMap = [html: "", files: ""]
   def listFile = ""
   def log = ""
         def changeLogSets = currentBuild.changeSets
-         echo "c ${changeLogSets.size()}"
         for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
             for (int j = 0; j < entries.length; j++) {
@@ -30,5 +28,7 @@ def info(env, currentBuild) {
                 log+="---------------------------<br>"
             }
         }
-    return log;
+    resultMap.html = log
+    resultMap.files = listFile
+    return resultMap;
 }
