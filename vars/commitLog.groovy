@@ -1,4 +1,4 @@
-def info(script) {
+def info(String script) {
   def env
   // def currentBuild
 
