@@ -1,4 +1,4 @@
-def call(env) {
+def call(String env) {
   // def env
   // def currentBuild
 
