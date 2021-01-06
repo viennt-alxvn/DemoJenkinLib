@@ -1,8 +1,8 @@
-def info(String script) {
+def info(script) {
   def env
   // def currentBuild
 
-  println "env ${script}"
+  println "env ${script.env.BRANCH_NAME}"
   
   // def log = ""
   //       def changeLogSets = script.currentBuild.changeSets
