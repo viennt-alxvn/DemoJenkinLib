@@ -2,7 +2,7 @@ def call(script) {
   def env
   // def currentBuild
 
-  println "env ${script.env.BRANCH_NAME}"
+  println "env ${script}"
   
   // def log = ""
   //       def changeLogSets = script.currentBuild.changeSets
