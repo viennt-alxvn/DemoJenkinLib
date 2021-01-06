@@ -1,8 +1,8 @@
-def call(String env) {
+def call(script) {
   // def env
   // def currentBuild
 
-  echo "env ${env}"
+  echo "env ${script.env.BRANCH_NAME}"
   
   // def log = ""
   //       def changeLogSets = script.currentBuild.changeSets
