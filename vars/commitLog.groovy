@@ -1,5 +1,5 @@
-def call() {
-  def env
+def call(env) {
+  // def env
   // def currentBuild
 
   echo "env ${env}"
