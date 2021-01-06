@@ -21,6 +21,7 @@ def info(script) {
                 log += "<br>"
                 log +="<b>Changed Paths:</b>"
                 log += "<br>"
+                 echo "c2 ${entry}"
                 def files = new ArrayList(entry.affectedFiles)
                 for (int k = 0; k < files.size(); k++) {
                     def file = files[k]
