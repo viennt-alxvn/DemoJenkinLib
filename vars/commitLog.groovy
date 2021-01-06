@@ -1,5 +1,5 @@
 def info(env, currentBuild) {
-  def resultMap = [html: {}, files: {}]
+  def resultMap = [html: "", files: ""]
   def listFile = ""
   def log = ""
         def changeLogSets = currentBuild.changeSets
@@ -28,7 +28,7 @@ def info(env, currentBuild) {
                 log+="---------------------------<br>"
             }
         }
-    resultMap.html = log
-    resultMap.files = listFile
+    resultMap['html'] = log
+    resultMap['files'] = listFile
     return resultMap;
 }
