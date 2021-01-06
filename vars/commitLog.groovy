@@ -1,9 +1,9 @@
-def info(script) {
+def info(env, currentBuild) {
 
-  println "env ${script.env.BRANCH_NAME}"
+  println "env ${env.BRANCH_NAME}"
   def listFile = ""
   def log = ""
-        def changeLogSets = script.currentBuild.changeSets
+        def changeLogSets = currentBuild.changeSets
          echo "c ${changeLogSets.size()}"
         for (int i = 0; i < changeLogSets.size(); i++) {
             def entries = changeLogSets[i].items
