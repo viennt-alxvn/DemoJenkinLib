@@ -23,6 +23,7 @@ def info(script) {
                 log += "<br>"
                  echo "c2 ${entry}"
                 def files = new ArrayList(entry.affectedFiles)
+                  echo "c3 ${files}"
                 for (int k = 0; k < files.size(); k++) {
                     def file = files[k]
                     listFile += "${file.path},"
