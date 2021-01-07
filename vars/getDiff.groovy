@@ -36,7 +36,7 @@ def info(String text, String listFile){
     }
 }
 
-def callSh(file1){
-    def res = sh( script: "php CheckSyntax.php ${file1}", returnStdout: true)
-  return res
-}
+// def callSh(file1){
+//     def res = sh( script: "php CheckSyntax.php ${file1}", returnStdout: true)
+//   return res
+// }
