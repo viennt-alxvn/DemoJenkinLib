@@ -13,7 +13,7 @@ def info(env, currentBuild) {
                 log += "<br>"
                 log += "<b>Author:</b> ${entry.author} "
                 log += "<br>"
-                log += "<b>Date:</b> ${Date.parse( 'dd-MMM-yyyy',entry.timestamp.toString())} "
+                log += "<b>Date:</b> ${new Date(entry.timestamp)} "
                 log += "<br>"
                 log += "<b>Message:</b> ${entry.msg} "
                 log += "<br>"
