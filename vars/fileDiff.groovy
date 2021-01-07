@@ -4,7 +4,7 @@ def info(String text, String listFile, String buildUrl){
     def indexFile = 0
     def arrFile = listFile.split(',')
   
-    if (arrFile.count() > 0) {
+    if (arrFile.length > 0) {
         bodyHtml += """<p>Check build changes on Jenkins <b><a href="${buildUrl}/last-changes">here</a></b>.</p><br>
                         <p><b>Files Diff</b></p>"""
 
