@@ -27,11 +27,11 @@ def info(String text, String listFile, String buildUrl){
                 bodyHtml +="<span>" + param+ "</span><br>"
             } else {
                 if (param.startsWith('-')){
-                    bodyHtml +="<code style='background-color:#fdaeb7; white-space:pre-wrap'>" + param.replace("<", "&lt;").replace(">","&gt;").replaceAll("[\n\r]\$", "") +"</code>"
+                    bodyHtml +="<code style='background-color:#fdaeb7; white-space:pre-wrap'>" + param.replace("<", "&lt;").replace(">","&gt;") +"</code>"
                 } else if(param.startsWith('+')) {
-                    bodyHtml +="<code style='background-color:#bef5cb; white-space:pre-wrap'>" + param.replace("<", "&lt;").replace(">","&gt;").replaceAll("[\n\r]\$", "") +"</code>"
+                    bodyHtml +="<code style='background-color:#bef5cb; white-space:pre-wrap'>" + param.replace("<", "&lt;").replace(">","&gt;") +"</code>"
                 } else {
-                    bodyHtml +="<code style='white-space:pre'>" + param.replace("<", "&lt;").replace(">","&gt;").replaceAll("[\n\r]\$", "") + "</code>"
+                    bodyHtml +="<code style='white-space:pre'>" + param.replace("<", "&lt;").replace(">","&gt;") + "</code>"
                 }
             }            
             count++            
