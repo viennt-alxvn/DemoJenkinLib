@@ -3,6 +3,7 @@ def info(String text, String listFile, String buildUrl){
     def count = 0
     def indexFile = 0
     def arrFile = listFile.split(',')
+     echo "file ${listFile}"
     echo "len ${arrFile.length}"
     if (arrFile.length > 0) {
         bodyHtml += """<p>Check build changes on Jenkins <b><a href="${buildUrl}/last-changes">here</a></b>.</p><br>
