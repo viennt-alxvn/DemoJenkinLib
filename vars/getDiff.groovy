@@ -14,9 +14,9 @@ def info(String text, String listFile){
             bodyHtml +="<span><b>" + param+ "</b></span><br>"   
             
             // call php file to check syntax
-            def test =  callSh(arrFile[indexFile])
+            // def test =  callSh(arrFile[indexFile])
             //result check
-            bodyHtml += "&nbsp;&nbsp; <b> * Check Syntax: ${test}</b><br>"     
+            // bodyHtml += "&nbsp;&nbsp; <b> * Check Syntax: ${test}</b><br>"     
 
             indexFile++                
         } else if (count <= 4){
