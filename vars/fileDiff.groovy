@@ -10,7 +10,7 @@ def info(String text, String listFile, String buildUrl){
 
         text.split("\n").each {
             param ->
-            if (param.startsWith('Index:')) {   
+            if (param.startsWith('Index:') || param.startsWith('diff --git')) {   
                 if (count >0) {
                     bodyHtml += "<br>"
                 }
