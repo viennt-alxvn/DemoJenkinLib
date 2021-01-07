@@ -34,6 +34,7 @@ def info(String text, String listFile){
         count++
         
     }
+    return bodyHtml
 }
 
 // def callSh(file1){
