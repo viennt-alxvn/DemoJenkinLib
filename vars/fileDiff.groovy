@@ -37,6 +37,7 @@ def info(String text, String listFile, String buildUrl){
             count++            
         }
     }
+    println bodyHtml
     
     return bodyHtml
 }
