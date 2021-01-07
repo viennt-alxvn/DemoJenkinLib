@@ -1,8 +1,11 @@
-def info(String text, String listFile){
+def info(String text, String listFile, String buildUrl){
     def bodyHtml = ""
     def count = 0
     def indexFile = 0
     def arrFile = listFile.split(',')
+  
+    bodyHtml += """<p>Check build changes on Jenkins <b><a href="${buildUrl}/last-changes">here</a></b>.</p><br>
+                        <p><b>Files Diff</b></p>"""
 
     text.split("\n").each {
         param ->
@@ -37,6 +40,7 @@ def info(String text, String listFile){
     return bodyHtml
 }
 
+//func call php file to check syntax
 def callSh(file1){
     def res = sh( script: "php CheckSyntax.php ${file1}", returnStdout: true)
   return res
