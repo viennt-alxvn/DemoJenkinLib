@@ -18,9 +18,9 @@ def info(String text, String listFile, String buildUrl){
                 bodyHtml +="<span><b>" + param+ "</b></span><br>"   
                 
                 // call php file to check syntax
-                // def test =  callSh(arrFile[indexFile])
-                // //result check
-                // bodyHtml += "&nbsp;&nbsp; <b> * Check Syntax: ${test}</b><br>"     
+                def test =  callSh(arrFile[indexFile])
+                //result check
+                bodyHtml += "&nbsp;&nbsp; <b> * Check Syntax: ${test}</b><br>"     
 
                 indexFile++                
             } else if (count <= 4){
@@ -43,6 +43,11 @@ def info(String text, String listFile, String buildUrl){
 
 //func call php file to check syntax
 def callSh(file1){
-    def res = sh( script: "php CheckSyntax.php ${file1}", returnStdout: true)
-  return res
+    try {
+        def res = sh( script: "php CheckSyntax.php ${file1}", returnStdout: true)
+        return res
+    } catch(Exception ex) {
+        return "File check not found"
+    }
+  
 }
